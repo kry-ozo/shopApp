@@ -1,0 +1,58 @@
+@import '../../colors';
+header{
+    max-height: 10em;
+    background-color: $primary-color;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    .switch{
+        position: absolute;
+        right: 0;
+        top: 2em;
+    }
+    .logo{
+        h1{
+            color:$secondary-color-light;
+        }
+    }
+    .menu{
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            li{
+                a{
+                    text-decoration: none;
+                    color: $secondary-color-light;
+                }
+            }
+        }
+    }
+    
+}
+.bar {
+    width: 27px;
+    height: 4px;
+    background-color: $secondary-color-light;
+    margin: 4px 0;
+    transition: 0.4s;
+    border-radius: 15px;
+  }
+
+.showed-menu{
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li{
+            a{
+                text-decoration: none;
+                color: $secondary-color-light;
+            }
+        }
+    }
+}
+
+.hidden-menu{
+    display: none;
+}
