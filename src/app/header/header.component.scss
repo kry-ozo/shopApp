@@ -1,6 +1,6 @@
 @import '../../colors';
 header{
-    max-height: 10em;
+    max-height: 11em;
     background-color: $primary-color;
     width: 100vw;
     display: flex;
@@ -9,25 +9,40 @@ header{
         position: absolute;
         right: 0;
         top: 2em;
-    }
-    .logo{
-        h1{
-            color:$secondary-color-light;
-        }
+        margin-right: .9em;
+        padding: .1em;
+        transition: outline .1s;
     }
     .menu{
         ul{
             list-style-type: none;
             margin: 0;
-            padding: 0;
+            
             li{
+                display: block;
                 a{
                     text-decoration: none;
                     color: $secondary-color-light;
                 }
             }
+            padding:  0 0  .5em;
         }
     }
+    .switch:hover{
+        outline-color: $secondary-color-lighter;
+        outline: 1px solid $secondary-color-lighter;
+        border-radius: 6px;
+    }
+    .logo{
+        h1{
+            padding-left: 1em;
+            a{
+                text-decoration: none;
+                color:$secondary-color-light;
+            }
+        }
+    }
+    
     
 }
 .bar {
@@ -40,19 +55,89 @@ header{
   }
 
 .showed-menu{
+    max-height: 7em;
+    overflow: hidden;
+    transition: max-height .4s ease-in-out;
+    padding-left: 2.1em;
     ul{
         list-style-type: none;
         margin: 0;
-        padding: 0;
+        
         li{
             a{
                 text-decoration: none;
                 color: $secondary-color-light;
             }
         }
+        padding:  0 0  .5em;
     }
 }
 
 .hidden-menu{
-    display: none;
+    max-height: 0;
+    transition: max-height 0.4s ease-in-out;
+    padding-left: 2.1em;
+    ul{
+        list-style-type: none;
+        margin: 0;
+        
+        li{
+            a{
+                text-decoration: none;
+                color: $secondary-color-light;
+            }
+        }
+        padding:  0 0  .5em;
+    }
+}
+
+@media(min-width: 720px){
+    header{
+        max-height: 6em;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        .switch{
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        
+        .logo{
+            flex-grow: 5;
+            h1{
+                color:$secondary-color-light;
+                padding-left: 1em;
+            }
+        }
+        
+        
+    }
+    
+    .showed-menu, .hidden-menu{
+        max-height: 7em;
+        padding-left: 2.1em;
+        flex-grow: 2;
+        ul{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            list-style-type: none;
+            margin: 0;
+            
+            li{
+                margin-top: .5em;
+                transition: transform  .2s ease-in-out;
+                a{
+                    text-decoration: none;
+                    color: $secondary-color-light;
+                }
+            }
+            li:hover{
+                transform: scale(1.2);
+            }
+            padding:  0 0  .5em;
+        }
+    }
+    
 }
