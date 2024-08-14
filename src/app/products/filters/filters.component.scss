@@ -1,0 +1,32 @@
+@import '../../../colors.scss';
+
+:host{
+    height: 50px;
+    width: 100vw;
+    form{
+        margin-top: 1em;
+        display: flex;
+        align-items: center;
+        height: 50px;
+        width: 90%;
+        height: 90%;
+        margin: 0 auto;
+        z-index: 1;
+        border: 1px solid $secondary-color-light;
+        border-radius: 8px;
+        padding: .3em;
+        select{
+            flex-grow: 3;
+            border: none;
+            font-size: 1em;
+            margin-top: .1em;
+            text-align: center;
+        }
+        select:focus{
+            border: none;
+            outline: none;
+        }
+        label{
+        }
+    }
+}

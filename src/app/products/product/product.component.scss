@@ -1,0 +1,14 @@
+@import '../../../colors.scss';
+
+:host{
+    .product-card{
+        padding: .5em;
+        border-radius: 12px;
+        img{
+            width: 100%;
+            height: 13em;
+            border-radius: 12px;
+        }
+        margin-bottom: 1em;
+    }
+}

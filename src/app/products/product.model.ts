@@ -4,4 +4,5 @@ export interface Product {
     price: number;
     dateAdded: Date;
     imageUrl: string;
+    rating: number;
 }

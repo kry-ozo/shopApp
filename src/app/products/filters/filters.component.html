@@ -1,1 +1,13 @@
-<p>filters works!</p>
+<form>
+    <label for="sortBy">
+        Sort By
+    </label>
+    <select name="sortBy" id="sortBy" [(ngModel)]="sortBy" (ngModelChange)="onSelectChange($event)">
+        <option value="0">None</option>
+        <option value="1">Name</option>
+        <option value="2">Highest Price</option>
+        <option value="3">Lowest Price</option>
+        <option value="4">Newest</option>
+        <option value="5">Oldest</option>
+    </select>
+</form>
