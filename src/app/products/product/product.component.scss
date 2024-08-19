@@ -1,14 +1,15 @@
 @import '../../../colors.scss';
 
 :host{
+    padding: .8em;
     .product-card{
-        padding: .5em;
-        border-radius: 12px;
         img{
-            width: 100%;
-            height: 13em;
+            height: 20em;
+            width: 28em;
             border-radius: 12px;
         }
-        margin-bottom: 1em;
+        p{
+            color: grey;
+        }
     }
 }

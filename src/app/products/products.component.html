@@ -1,13 +1,15 @@
-<app-filters (filter)="getFilters($event)"/>
+<div class="filter">
+    <app-filters (filter)="getFilters($event)"/>
 @if(filter()=="0"){
     
 }@else{
     <p>Products sorted by {{filterName()}}</p>
 }
+</div>
 <section>
-    <div class="products">
-        @for(product of products(); track product.id){
-            <app-product [product]="product"/>
-        }
-    </div>
+    @for(product of products(); track product.id){
+        <app-product [product]="product"/>
+    }
 </section>
+
+

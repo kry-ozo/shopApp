@@ -1,7 +1,6 @@
 <div class="product-card">
     <img [src]="product.imageUrl" alt="">
-    
-    <h2>{{product.name}}</h2>
-    <p-rating [(ngModel)]="value" [readonly]="true" [cancel]="false" />
-    <p>{{product.price| currency}}</p>
+     <h2>{{product.name}}</h2>
+     <p-rating [(ngModel)]="value" [readonly]="true" [cancel]="false" />
+     <p>{{product.price|currency}}</p>
 </div>
