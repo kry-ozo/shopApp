@@ -14,19 +14,59 @@
         z-index: 1;
         border: 1px solid $secondary-color-light;
         border-radius: 8px;
-        padding: .3em;
+        padding: .4em;
         select{
             flex-grow: 3;
             border: none;
             font-size: 1em;
             margin-top: .1em;
             text-align: center;
+            option{
+                padding: .5em;
+            }
         }
         select:focus{
             border: none;
             outline: none;
         }
         label{
+        }
+    }
+}
+
+@media(min-width:720px){
+    :host{
+        height: 50px;
+        width: 100vw;
+        form{
+            margin-top: 1em;
+            display: flex;
+            align-items: center;
+            height: 50px;
+            width: 30%;
+            height: 100%;
+            margin: 0 auto;
+            z-index: 1;
+            border: 1px solid $secondary-color-light;
+            border-radius: 8px;
+            padding: .8em;
+            transition: padding .4s;
+            select{
+                flex-grow: 3;
+                border: none;
+                font-size: 1em;
+                margin-top: .1em;
+                text-align: center;
+                option{
+                    padding: .5em;
+                }
+            }
+            select:focus{
+                border: none;
+                outline: none;
+            }
+            label{
+            }
         }
     }
 }
