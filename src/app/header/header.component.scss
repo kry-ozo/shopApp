@@ -6,6 +6,7 @@ header{
     display: flex;
     flex-direction: column;
     margin-bottom: .5em;
+    box-shadow: 10px 0 12px $primary-color;
     .switch{
         position: absolute;
         right: 0;

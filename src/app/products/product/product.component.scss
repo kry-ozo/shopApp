@@ -1,8 +1,13 @@
 @import '../../../colors.scss';
 
 :host{
+    transition: .6s box-shadow;
+    cursor: pointer;
+    border-radius: 12px;
     padding: .8em;
+    margin-bottom: 2em;
     .product-card{
+        margin-bottom: 1em;
         img{
             height: 20em;
             width: 28em;
@@ -12,4 +17,8 @@
             color: grey;
         }
     }
+}
+
+:host:hover{
+    box-shadow: 0 0 12px $primary-color;
 }
