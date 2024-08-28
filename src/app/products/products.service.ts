@@ -7,7 +7,6 @@ import { Product } from './product.model';
 export class ProductsService {
   products: Product[] = products_placeholder;
   getProducts(filter:string){
-    console.log(filter)
     
       switch (filter) {
         case '1':
@@ -25,6 +24,12 @@ export class ProductsService {
     }
     
     
+  }
+  getProduct(id:string){
+    const product = this.products.find(product=>{
+        return product.id ===id
+    })
+    return product
   }
   getFilterName(filter: string){
     switch (filter) {

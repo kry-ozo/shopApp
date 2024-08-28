@@ -2,7 +2,7 @@ import { Product } from "./product.model";
 
 export const products_placeholder: Product[] = [
     {
-        id: 1,
+        id: '1',
         name: "Smartphone XYZ",
         price: 999.99,
         dateAdded: new Date("2024-08-01"),
@@ -10,7 +10,7 @@ export const products_placeholder: Product[] = [
         rating: 3
     },
     {
-        id: 2,
+        id: '2',
         name: "Laptop ABC",
         price: 1499.99,
         dateAdded: new Date("2024-07-15"),
@@ -18,7 +18,7 @@ export const products_placeholder: Product[] = [
         rating: 4
     },
     {
-        id: 3,
+        id: '3',
         name: "Wireless Headphones",
         price: 199.99,
         dateAdded: new Date("2024-08-05"),
@@ -26,7 +26,7 @@ export const products_placeholder: Product[] = [
         rating:2
     },
     {
-        id: 4,
+        id: '4',
         name: "Smartwatch",
         price: 299.99,
         dateAdded: new Date("2024-07-20"),
@@ -34,7 +34,7 @@ export const products_placeholder: Product[] = [
         rating:1
     },
     {
-        id: 5,
+        id: '5',
         name: "Action Camera",
         price: 249.99,
         dateAdded: new Date("2024-07-25"),
@@ -42,7 +42,7 @@ export const products_placeholder: Product[] = [
         rating: 4
     },
     {
-        id: 6,
+        id: '6',
         name: "Phone DEF",
         price: 399.99,
         dateAdded: new Date("2024-06-30"),
@@ -50,7 +50,7 @@ export const products_placeholder: Product[] = [
         rating: 5
     },
     {
-        id: 7,
+        id: '7',
         name: "Bluetooth Speaker",
         price: 89.99,
         dateAdded: new Date("2024-08-03"),
@@ -58,7 +58,7 @@ export const products_placeholder: Product[] = [
         rating: 4
     },
     {
-        id: 8,
+        id: '8',
         name: "Gaming Console",
         price: 499.99,
         dateAdded: new Date("2024-07-10"),
@@ -66,7 +66,7 @@ export const products_placeholder: Product[] = [
         rating: 2
     },
     {
-        id: 9,
+        id: '9',
         name: "Mechanical Keyboard",
         price: 129.99,
         dateAdded: new Date("2024-07-18"),
@@ -74,7 +74,7 @@ export const products_placeholder: Product[] = [
         rating: 4
     },
     {
-        id: 10,
+        id: '10',
         name: "4K Monitor",
         price: 399.99,
         dateAdded: new Date("2024-06-25"),
@@ -82,7 +82,7 @@ export const products_placeholder: Product[] = [
         rating: 3
     },
     {
-        id: 11,
+        id: '11',
         name: "Printer",
         price: 799.99,
         dateAdded: new Date("2024-07-28"),
@@ -90,7 +90,7 @@ export const products_placeholder: Product[] = [
         rating: 5
     },
     {
-        id: 12,
+        id: '12',
         name: "Drone with Camera",
         price: 899.99,
         dateAdded: new Date("2024-07-05"),
