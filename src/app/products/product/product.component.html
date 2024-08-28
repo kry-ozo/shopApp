@@ -1,4 +1,4 @@
-<div class="product-card">
+<div class="product-card" [routerLink]="['/','products', product.id]">
     <img [src]="product.imageUrl" alt="">
      <h2>{{product.name}}</h2>
      <p-rating [(ngModel)]="value" [readonly]="true" [cancel]="false" />

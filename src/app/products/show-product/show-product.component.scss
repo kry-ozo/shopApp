@@ -1,0 +1,39 @@
+@import '../../../colors.scss';
+
+:host{
+    section{
+        margin-top: 1em;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: column;
+        img{
+            width: 90%;
+            height: 90%;
+            border-radius: 12px;
+        }
+        .text{
+            h1{
+                font-size: 2em;
+            }
+        }
+        .btns{
+            display: flex;
+            justify-content: space-between;
+            button{
+                border-radius: 12px;
+                border: 1px solid $primary-color;
+                background-color: $primary-color;
+                color: $secondary-color-light;
+                font-size: 1.1em;
+                padding: .5em 1em;
+                font-weight: 600;
+            }
+            button:first-of-type{
+                border:1px solid $primary-color;
+                background-color: $secondary-color-light;
+                color: $primary-color;
+            }
+        }
+    }
+}
