@@ -18,8 +18,9 @@
             }
         }
         .btns{
+            width: 50%;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             button{
                 border-radius: 12px;
                 border: 1px solid $primary-color;
@@ -28,12 +29,21 @@
                 font-size: 1.1em;
                 padding: .5em 1em;
                 font-weight: 600;
+                transition: transform .4s;
+            }
+            button:hover{
+                transform: scale(1.1)
             }
             button:first-of-type{
-                border:1px solid $primary-color;
+                border:1px solid $secondary-color-light;
                 background-color: $secondary-color-light;
                 color: $primary-color;
             }
         }
+    }
+    .prod-desc{
+        background-color: $primary-color;
+        padding-bottom: 3em;
+        color: $secondary-color-light;
     }
 }

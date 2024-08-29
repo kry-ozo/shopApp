@@ -5,4 +5,5 @@ export interface Product {
     dateAdded: Date;
     imageUrl: string;
     rating: number;
+    description: string;
 }
