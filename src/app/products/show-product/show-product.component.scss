@@ -42,8 +42,109 @@
         }
     }
     .prod-desc{
+        margin-top: 0;
+        padding-top:1em ;
         background-color: $primary-color;
         padding-bottom: 3em;
         color: $secondary-color-light;
+        
+    }
+    .diagonal-section {
+        position: relative;
+        background-color: $primary-color; /* Tło sekcji */
+        padding-top: 100px; /* Dostosuj w zależności od potrzeb */
+        overflow: hidden; /* Aby linia nie wychodziła poza sekcję */
+      }
+      
+      .diagonal-section::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100px; /* Wysokość przełamania */
+        background-color: #fff; /* Kolor przełamania */
+        transform: skewY(-1.8deg); /* Kąt przełamania */
+        transform-origin: top left;
+        border: 0;
+      }
+
+    
+}
+
+@media(min-width:920px){
+    :host{
+        section{
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 1em;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            img{
+                width: 50%;
+                height: 50%;
+                border-radius: 12px;
+            }
+            .text{
+                h1{
+                    font-size: 2em;
+                }
+            }
+            .btns{
+                width: 50%;
+                display: flex;
+                justify-content: space-around;
+                button{
+                    border-radius: 12px;
+                    border: 1px solid $primary-color;
+                    background-color: $primary-color;
+                    color: $secondary-color-light;
+                    font-size: 1.1em;
+                    padding: .5em 1em;
+                    font-weight: 600;
+                    transition: transform .4s;
+                }
+                button:hover{
+                    transform: scale(1.1)
+                }
+                button:first-of-type{
+                    border:1px solid $secondary-color-light;
+                    background-color: $secondary-color-light;
+                    color: $primary-color;
+                }
+            }
+        }
+        .prod-desc{
+            margin-top: 0;
+            padding-top:1em ;
+            background-color: $primary-color;
+            padding-bottom: 3em;
+            color: $secondary-color-light;
+            
+        }
+        .diagonal-section {
+            position: relative;
+            background-color: $primary-color; /* Tło sekcji */
+            padding-top: 100px; /* Dostosuj w zależności od potrzeb */
+            overflow: hidden; /* Aby linia nie wychodziła poza sekcję */
+          }
+          
+          .diagonal-section::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px; /* Wysokość przełamania */
+            background-color: #fff; /* Kolor przełamania */
+            transform: skewY(-1.8deg); /* Kąt przełamania */
+            transform-origin: top left;
+            border: 0;
+          }
+    
+        
     }
 }

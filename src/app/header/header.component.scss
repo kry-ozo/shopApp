@@ -23,6 +23,7 @@ header{
             li{
                 display: block;
                 a{
+                    
                     text-decoration: none;
                     color: $secondary-color-light;
                 }
@@ -131,6 +132,7 @@ header{
     }
     
     .showed-menu, .hidden-menu{
+        padding-top:.6em ;
         max-height: 7em;
         transition: max-height .4s ease-in-out;
         padding-left: 2.1em;
