@@ -1,0 +1,23 @@
+@import '../../../colors.scss';
+
+.diagonal-section {
+    margin-top: 2em;
+    position: relative;
+    background-color: $primary-color; /* Tło sekcji */
+    padding-top: 100px; /* Dostosuj w zależności od potrzeb */
+    overflow: hidden; /* Aby linia nie wychodziła poza sekcję */
+  }
+  
+  .diagonal-section::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px; /* Wysokość przełamania */
+    background-color: #fff; /* Kolor przełamania */
+    transform: skewY(-1.8deg); /* Kąt przełamania */
+    transform-origin: top left;
+    border: 0;
+  }

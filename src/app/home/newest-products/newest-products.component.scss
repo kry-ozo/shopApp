@@ -1,0 +1,74 @@
+@import '../../../colors.scss';
+:host{
+    h2{
+      background-color: $primary-color;
+        margin: 0;
+        color: $secondary-color-light;
+        text-align: center;
+        font-size: 1.8em;
+    }
+    .carousel-container {
+        background-color: $primary-color;
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+      }
+      
+      .carousel-wrapper {
+        display: flex;
+        transition: transform 0.5s ease; /* Płynne przejście */
+        width: 100%;
+      }
+      
+      .carousel-slide {
+        min-width: 100%; /* Jeden slajd na całą szerokość */
+        box-sizing: border-box;
+        padding: 20px;
+      }
+      
+      .carousel-control {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      
+      .carousel-control.prev {
+        left: 10px;
+      }
+      
+      .carousel-control.next {
+        right: 10px;
+        margin-bottom: 50px;
+        height: 7em;
+        border-radius: 12px;
+        top: 5.2em;
+      }
+      
+      .product-card {
+        text-align: center;
+      }
+      
+      .product-card img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+        width: 30em;
+        height: 18em;
+      }
+      p{
+        color: grey;
+      }
+      h3{
+        text-align: center;
+        font-size: 1.8em;
+        color: $secondary-color-light;
+      }
+      
+}
