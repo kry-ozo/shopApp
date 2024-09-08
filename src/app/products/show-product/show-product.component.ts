@@ -2,11 +2,12 @@ import { Component, DestroyRef, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Route } from '@angular/router';
 import { ProductsService } from '../products.service';
 import { Product } from '../product.model';
+import { WaveComponent } from "../../styleElements/wave/wave.component";
 
 @Component({
   selector: 'app-show-product',
   standalone: true,
-  imports: [],
+  imports: [WaveComponent],
   templateUrl: './show-product.component.html',
   styleUrl: './show-product.component.scss'
 })

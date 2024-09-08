@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { ProductsService } from '../../products/products.service';
 import { WaveComponent } from "../../styleElements/wave/wave.component";
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-newest-products',
   standalone: true,
-  imports: [CommonModule, WaveComponent],
+  imports: [CommonModule, WaveComponent, RouterLink],
   templateUrl: './newest-products.component.html',
   styleUrl: './newest-products.component.scss'
 })

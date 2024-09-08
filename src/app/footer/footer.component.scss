@@ -1,0 +1,15 @@
+@import '../../colors.scss';
+:host{
+    footer{
+        margin-top: 0;
+        height: 14vh;
+        background-color: $primary-color;
+        padding: 1em 3em 3em;
+        box-shadow: 10px 0 12px $primary-color;
+        p{
+            font-size: .9em;
+            margin: 0;
+            color: $secondary-color-light;
+        }
+    }
+}
