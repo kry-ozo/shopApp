@@ -1,0 +1,35 @@
+@import '../../colors.scss';
+
+
+//Hide cart setup
+:host{
+    aside{
+        cursor: pointer;
+        background-color: $primary-color;
+        border-radius: 100%;
+        position: absolute;
+        right: 10px;
+        .cart{
+            width: 3.5em;
+            height: 3.5em;
+            padding: 1em 1em;
+        }
+    }
+}
+
+//Show cart setup
+
+:host{
+    aside{
+        cursor: pointer;
+        background-color: $primary-color;
+        border-radius: 100%;
+        position: absolute;
+        right: 10px;
+        .cart{
+            width: 3.5em;
+            height: 3.5em;
+            padding: 1em 1em;
+        }
+    }
+}

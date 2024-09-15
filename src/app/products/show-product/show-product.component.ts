@@ -3,7 +3,7 @@ import { ActivatedRoute, Params, Route } from '@angular/router';
 import { ProductsService } from '../products.service';
 import { Product } from '../product.model';
 import { WaveComponent } from "../../styleElements/wave/wave.component";
-
+import { CartService } from '../../shop-cart/cart.service';
 @Component({
   selector: 'app-show-product',
   standalone: true,
@@ -16,6 +16,7 @@ export class ShowProductComponent implements OnInit {
   private activatedRoute = inject(ActivatedRoute)
   private productsService = inject(ProductsService)
   private destroyRef = inject(DestroyRef)
+  private cartService = inject(CartService)
   productId!: string
   product!: Product | undefined
   
@@ -28,6 +29,9 @@ export class ShowProductComponent implements OnInit {
    this.destroyRef.onDestroy(()=>{
     paramMap.unsubscribe()
    }) 
+  }
+  addToCart(){
+    this.cartService.addToCart(this.product);
   }
   
 
