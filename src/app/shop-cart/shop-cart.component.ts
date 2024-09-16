@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CartService } from './cart.service';
 import { cartItem } from './cart-item.model';
@@ -14,7 +14,9 @@ export class ShopCartComponent {
   private cartService = inject(CartService);
   cartItems:cartItem[] = this.cartService.getCartProducts();
   showCart: boolean = false;
-
+  cartPrices = this.cartService.getCartPrice();
+  cartPrice = this.cartService.cartPrice;
+  
   toggleCart(){
     this.showCart = !this.showCart;
   }

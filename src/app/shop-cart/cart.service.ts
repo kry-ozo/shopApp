@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { cartItem } from './cart-item.model';
 import { Product } from '../products/product.model';
 
@@ -7,8 +7,12 @@ import { Product } from '../products/product.model';
 })
 export class CartService {
   cartItems: cartItem[] = [];
+  cartPrice= signal<number>(0);
   getCartProducts(){
     return this.cartItems;
+  }
+  getCartPrice(){
+    return this.cartPrice();
   }
   addToCart(product: Product| undefined){
     if(product){
@@ -18,7 +22,8 @@ export class CartService {
         productPrice: product.price
       };
       this.cartItems.push(newCartItem);
-      console.log(this.cartItems);
+      this.cartPrice.update(price=>price+newCartItem.productPrice);
+      console.log(this.cartPrice)
     }
   }
 

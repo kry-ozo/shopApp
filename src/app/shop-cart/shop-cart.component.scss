@@ -1,35 +1,52 @@
 @import '../../colors.scss';
 
 
-//Hide cart setup
+
 :host{
-    aside{
+    .cart{
         cursor: pointer;
         background-color: $primary-color;
-        border-radius: 100%;
         position: absolute;
         right: 10px;
-        .cart{
-            width: 3.5em;
-            height: 3.5em;
-            padding: 1em 1em;
+        border-radius: 50%;
+        height: 5em;
+        width: 5em;
+        text-align: center;
+        color: white;
+        span{
+            
+            text-align: center;
+            
         }
+
+    }    
+    main.show-cart{
+        background-color: $primary-color;
+        display: block;
+        position: absolute;
+        min-height: 5em;
+        right: 10px;
+        top: 180px;
+        border-radius: 12px;
+        min-width: 15em;
+        padding-bottom: .5em;
+        h3{
+            color: white;
+        }
+        .products{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p{
+                color: white;
+            }
+        }
+       
+    }
+    main.hide-cart{
+        display: none;
     }
 }
 
-//Show cart setup
 
-:host{
-    aside{
-        cursor: pointer;
-        background-color: $primary-color;
-        border-radius: 100%;
-        position: absolute;
-        right: 10px;
-        .cart{
-            width: 3.5em;
-            height: 3.5em;
-            padding: 1em 1em;
-        }
-    }
-}
+
