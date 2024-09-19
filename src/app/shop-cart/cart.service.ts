@@ -6,10 +6,10 @@ import { Product } from '../products/product.model';
   providedIn: 'root'
 })
 export class CartService {
-  cartItems: cartItem[] = [];
+  cartItems = signal<cartItem[]>([]);
   cartPrice= signal<number>(0);
   getCartProducts(){
-    return this.cartItems;
+    return this.cartItems();
   }
   getCartPrice(){
     return this.cartPrice();
@@ -21,17 +21,34 @@ export class CartService {
         productName: product.name,
         productPrice: product.price
       };
-      this.cartItems.push(newCartItem);
-      this.cartPrice.update(price=>price+newCartItem.productPrice);
-      console.log(this.cartPrice)
+      if(this.cartItems().length<=4){
+        const oldCartItems = this.cartItems();
+        oldCartItems.push(newCartItem)
+        this.cartItems.set(oldCartItems);
+        this.cartPrice.update(price=>price+newCartItem.productPrice);
+        console.log(this.cartItems())
+      }
+      
     }
   }
 
   deleteFromCart(productId: string){
-    this.cartItems = this.cartItems.filter(cartItem=>{
-      cartItem.productId !=productId
-    })
-    console.log(this.cartItems);
+    const deletedCartItem = this.cartItems().find(cartItem=>cartItem.productId ==productId)
+    console.log(deletedCartItem)
+    if(deletedCartItem){
+      this.cartPrice.update(price=>price-deletedCartItem.productPrice);
+
+      const cartItems = this.cartItems();
+      const indexOfDeletedItem = cartItems.indexOf(deletedCartItem);
+      cartItems.splice(indexOfDeletedItem, 1);
+      this.cartItems.set(cartItems);
+      console.log(this.cartItems())
+    }
+
+    
+    
+    // this.cartItems.set(newCartItems);
+    
   }
   constructor() { }
 }

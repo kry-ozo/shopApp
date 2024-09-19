@@ -1,20 +1,32 @@
 <section class="cart" (click)="toggleCart()">
-    <span><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff"  viewBox="0 0 16 16">
+    <span [className]="getIconCartClass">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff"  viewBox="0 0 16 16">
         <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-      </svg></span>
+      </svg>
+    </span>
+      <span [className]="getIconXClass">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+          </svg>
+      </span>
     
 </section>
 <main  [className]="getCartClass">
     <section class="products">
         @if(cartItems.length==0){
             <p>Cart is empty</p>
+            
         }@else{
             <h3>Your products:</h3>
             @for(cartItem of cartItems; track cartItem.productId){
                 
-                <p>{{cartItem.productName}}</p>
+                <p (click)="deleteItemFromCart(cartItem.productId)">{{cartItem.productName}} <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16" >
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                  </svg></p>
             }
             <p>Price:{{cartPrice()|currency}}</p>
+            <button class="buy-btn">Buy</button>
         }
+        <p class="info">(Remember, the maximum number of items per order cannot exceed 5)</p>
     </section>
 </main>

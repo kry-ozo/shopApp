@@ -16,9 +16,15 @@ export class ShopCartComponent {
   showCart: boolean = false;
   cartPrices = this.cartService.getCartPrice();
   cartPrice = this.cartService.cartPrice;
+  cartOpened:boolean = false;
+
+  deleteItemFromCart(id:string){
+    this.cartService.deleteFromCart(id);
+  }
   
   toggleCart(){
     this.showCart = !this.showCart;
+    this.cartOpened = !this.cartOpened;
   }
 
   get getCartClass(){
@@ -29,4 +35,33 @@ export class ShopCartComponent {
     }
     
   }
-}
+
+  get getIconCartClass(){
+    if(this.showCart){
+      return "closed";
+    }else{
+      return 'opened';
+    }
+    
+  }
+
+  get getIconXClass(){
+    if(this.showCart){
+      return "opened";
+    }else{
+      return 'closed';
+    }
+  }
+  get getOpenCart(){
+    if(this.showCart){
+      return "opened";
+    }else{
+      return 'closed';
+    }
+  }
+    
+  }
+  
+    
+  
+
